@@ -31,5 +31,16 @@ public class HelloServlets extends HttpServlet {
 		resp.getWriter().print("Ola mundo POST " + nome + " " + sobrenome);
 	}
 	
+	@Override
+	protected void doPut(HttpServletRequest req, HttpServletResponse resp)
+		throws ServletException, IOException {
+		resp.getWriter().print("Ola PUT");
+	}
+	
+	@Override
+	protected void doDelete(HttpServletRequest req, HttpServletResponse resp)
+		throws ServletException,IOException {
+		resp.getWriter().print("Ola DELETE");
+	}
 
 }
