@@ -22,5 +22,14 @@ public class HelloServlets extends HttpServlet {
 		resp.getWriter().print("Ola mundo " + nome + " " + sobrenome);
 	}
 	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+		throws ServletException, IOException {
+		String nome = req.getParameter("nome");
+		String sobrenome = req.getParameter("sobrenome");
+		
+		resp.getWriter().print("Ola mundo POST " + nome + " " + sobrenome);
+	}
+	
 
 }
